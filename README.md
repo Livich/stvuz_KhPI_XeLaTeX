@@ -1,0 +1,1 @@
+XeLaTeX KhPI template stub
