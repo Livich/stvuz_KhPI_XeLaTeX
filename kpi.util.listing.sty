@@ -1,0 +1,45 @@
+%kpi.util.listing.tex
+%Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
+%Обеспеичвает поддержку листингов
+%Макросы: putListing
+%NOTE: переопределяет настройки пакета listings
+%NOTE: переопределяет команды пакета framed
+%DEPENDS: listings, framed(modified)
+
+\newcommand{\currentSourceName}{UNDEFINED}
+
+\newcommand{\currentSourceLabel}{UNDEFINED}
+
+\renewcommand{\FrameHeightAdjust}{0pt}
+
+\newcommand{\aVsize}{240mm}
+
+\newcommand{\aPagegoal}{\aVsize}
+
+\renewcommand{\theFramedSubCaption}{\captionof{figure}{\currentSourceName} \label{\currentSourceLabel}}
+
+%putListing вставляет листинг с разбивкой на страницы, как будто это изображения
+% (маразм)
+%Использование: \putListing{[исходный файл]}{[подпись]}{[метка]}{[язык
+% листинга]}
+\newcommand{\putListing}[4]{
+	\renewcommand{\currentSourceName}{#2}
+	\renewcommand{\currentSourceLabel}{#3_\arabic{ESKD@figure}}
+	\lstset{language=#4}
+	\begin{framed}
+		\lstinputlisting{#1}
+	\end{framed}
+	\captionof{figure}{#2}
+	\label{#3}
+}
+
+\lstset{
+   breaklines=true,
+   basicstyle=\small\ttfamily,
+   numbers=left,
+   stepnumber=1,
+   firstnumber=1,
+   numberfirstline=true,
+   numberstyle=\small,
+   tabsize=2
+}

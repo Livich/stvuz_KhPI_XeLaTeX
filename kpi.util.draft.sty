@@ -1,0 +1,54 @@
+%kpi.util.draft.tex
+%Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
+%Обеспеичвает поддержку режима черновика
+%Макросы: ifxdraft, dPutImage, dPutListing, draftPage
+%DEPENDS: datetime, ifdraft
+
+%ifxdraft позволяет выполнять проекрку режима черновика
+%Использование:  \ifxdtaft [если черновик] \else [если не черновик] \fi
+\ifdraft{\let\ifxdraft\iftrue}{\let\ifxdraft\iffalse}
+
+%dPutImage позволяет отобразить вместо изображения его заглушку
+%Использование: \dPutImage{[имя файла
+% изображения]}{[подпись]}{[масштаб]}{[метка]}
+\newcommand{\dPutImage}[4]{\ifxdraft
+	{\bf STUB:} Sorry, this image (<<#2>>) disabled in draft mode. Lookup
+	for image in <<#1>>. \label{#4}
+\else
+	\putImage{#1}{#2}{#3}{#3}
+\fi}
+
+%dPutListing позволяет отобразить вместо листинга его заглушку
+%Использование:
+% \dPutListing{[исходный файл]}{[подпись]}{[метка]}{[язык листинга]}
+\newcommand{\dPutListing}[4]{\ifxdraft
+	{\bf STUB:} Sorry, this listing (<<#2>>) disabled in draft mode. Lookup
+	for code in <<#1>>. \label{#3} \addtocounter{ESKD@figure}{1}
+\else
+	\putListing{#1}{#2}{#3}{#3}
+\fi}
+
+%draftPage позволяет подключать к документу-черновику страницу с информацией о
+% версии документа
+%Использование: \draftPage
+\newcommand{\draftPage}{
+	\ifxdraft
+		\newcount\hour \newcount\minute 
+		\hour=\time \divide \hour by 60
+		\minute=\time
+		\loop \ifnum \minute > 59 \advance \minute by -60 \repeat
+		\section{Draft}
+			This document is a draft. Some images and source listings are not included.
+			\begin{center}
+				\begin{tabular}{|l|l|}
+					\hline
+					Date & \the\day-\the\month-\the\year \\ \hline
+					Time & \number\hour:\number\minute \\\hline
+					Author & \documentAuthor \\\hline
+					Title & \documentTitle\\\hline
+					Code & \documentCode\pdfdate \\
+					\hline
+				\end{tabular}
+			\end{center}
+	\fi
+}

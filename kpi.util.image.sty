@@ -1,0 +1,15 @@
+%kpi.util.listing.tex
+%Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
+%Обеспеичвает поддержку изображений
+%Макросы: putImage
+
+%PutImage позволяет отобразить изображение
+%Использование: \PutImage{[имя файла
+% изображения]}{[подпись]}{[масштаб]}{[метка]}
+\newcommand{\putImage}[4]{
+	\begin{stdfigure}
+		\includegraphics[scale=#3]{images/#1}
+		\caption{#2}
+		\label{#4}
+	\end{stdfigure}
+}
