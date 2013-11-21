@@ -1,1 +1,1 @@
-XeLaTeX KhPI template stub
+XeLaTeX KhPI template stub with a lot of utils. Free to use, ready to work.
