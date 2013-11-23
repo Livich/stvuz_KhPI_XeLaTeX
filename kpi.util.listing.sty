@@ -25,7 +25,7 @@
 \newcommand{\putListing}[4]{
 	\renewcommand{\currentSourceName}{#2}
 	\renewcommand{\currentSourceLabel}{#3_\arabic{ESKD@figure}}
-	\lstset{language=#4}
+	\lstset{language=#4, keepspaces=true}
 	\begin{framed}
 		\lstinputlisting{#1}
 	\end{framed}
