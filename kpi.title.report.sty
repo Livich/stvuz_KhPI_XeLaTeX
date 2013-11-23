@@ -1,0 +1,44 @@
+%kpi.title.report.tex
+%Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
+%Определяет титульную страницу для отчётов
+%Макросы: maketitle
+%DEPENDS: hyperref
+%CONFLICTS: любой kpi.title.* стиль
+%NOTE: меняет настройки hyperref
+
+%maketitle требует чтобы были определены следующие макросы:
+%\docNumber - номер (лабораторной) работы 
+%\docDepartment - название кафедры
+%\docSubject - название учебной дисциплины
+%\studentGroup - группа автора
+%\studentName - ФИО автора
+%\docChecker - должность и ФИО проверяющего
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, filecolor=black,
+urlcolor=black, pdftitle={Лабораторна робота №\docNumber},
+pdfauthor={\studentName}} \renewcommand{\maketitle}{
+  \begin{center}
+    МІНІСТЕРСТВО ОСВІТИ І НАУКИ, МОЛОДІ ТА СПОРТУ УКРАЇНИ\\
+    НАЦІОНАЛЬНИЙ ТЕХНІЧНИЙ УНІВЕРСИТЕТ\\\
+    <<Харківський політехнічний інститут>>\\\
+    Кафедра <<\docDepartment>>\\
+    \vfill
+    {\Large \bf ЗВІТ}\\
+    {\Large З лабороторної роботи №\docNumber}\\
+    {\Large по курсу <<\docSubject>>}\\
+  \end{center}
+\vfill
+\hfill
+  \begin{minipage}[t]{80mm}\flushleft
+    ВИКОНАВ\\
+    Студент групи \studentGroup \\
+    \studentName \\
+    \vspace{10mm}
+    ПЕРЕВІРИВ \\
+    \docChecker
+  \end{minipage}
+\vspace{10mm}
+\vfill
+\begin{center}Харків \the\year\end{center}
+\thispagestyle{empty}
+\newpage
+}
