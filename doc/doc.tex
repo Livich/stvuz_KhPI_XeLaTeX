@@ -1,0 +1,31 @@
+\documentclass{../stvuz_khpi}
+%METAINFO:
+\newcommand{\studentName}{Livich}% Автор документа, например Іванов С.О.
+\newcommand{\documentTitle}{stvuz-KhPI-XeLaTeX-doc}%Заголовок документа
+\newcommand{\documentCode}{stvuz-khpi-xelatex-doc}%Код документа, например
+% mmio-lab7
+\title{Doc}%Название документа
+%METAINFO END
+
+%Общие опциональные пакеты:
+\usepackage{url}
+\urlstyle{same}
+\input{../pygmentize}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{listings}
+
+%Поддержка листингов
+\usepackage{../framed}
+\usepackage{../kpi.util.listing}
+
+%Поддержка вставки изображений
+\usepackage{../kpi.util.image}
+
+\begin{document}
+%тело документа
+\input{sections/title}
+\input{sections/introduction}
+\input{sections/samples}
+%\bibliography{sources.bib} %библиографический список
+\end{document}
