@@ -27,7 +27,7 @@
 % листинга]}
 \newcommand{\putListing}[4]{
 	\renewcommand{\currentSourceName}{#2}
-	\renewcommand{\currentCounterName}{#3-counter}
+	\renewcommand{\currentCounterName}{#3:counter}
 	\newcounter{\currentCounterName}
 	\renewcommand{\currentSourceLabel}{#3-\arabic{\currentCounterName}}
 	\lstset{language=#4}
@@ -46,7 +46,7 @@
 % ссылки на первый и последний рисунки через дефис
 %Использование: \listingLink{[метка листинга]}
 \newcommand{\listingLink}[1]{
-	\ifnum\#1-counter=1
+	\ifnum\#1:counter=1
 			~\ref{#1-0} 
 		\else 
 			~\ref{#1-0}~--~\ref{#1-last} 

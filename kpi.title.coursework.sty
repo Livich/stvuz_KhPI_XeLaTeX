@@ -1,0 +1,94 @@
+%kpi.title.report.tex
+%Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
+%Определяет набор титульных страниц для курсовых проектов
+%Макросы: maketitle
+%DEPENDS: hyperref
+%CONFLICTS: любой kpi.title.* стиль
+%NOTE: меняет настройки hyperref
+
+%maketitle требует чтобы были определены 
+%\docDepartment - название кафедры
+%\workSupervisor - руководитель работы, напр. "Сокол В.Е."
+%\workSupervisorPosition - статус руководителя работы, например "асистент каф. АСУ"
+%\docSubject - название курсовой работы
+%\studentGroup - группа автора
+%\studentName - ФИО автора
+%\docChecker - ФИО проверяющего
+%\docCheckerPosition - статус проверяющего, например "голова комісії професор"
+
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, filecolor=black,
+urlcolor=black, pdftitle={Курсова робота},
+pdfauthor={\studentName}}
+
+\newcommand{\datePlaceholder}{
+	\hspace*{52.7mm}\begin{minipage}[t]{76.2mm}\begin{center}
+	<<\rule{6ex}{0.5pt}>>\rule{13ex}{0.5pt}20\rule{2ex}{0.5pt}р\end{center}\end{minipage}\hspace*{54.9mm}
+}
+
+
+\renewcommand{\maketitle}{
+\null
+\vfill
+\begin{center}
+\begin{minipage}[t]{180mm}
+\begin{framed}
+\begin{center}
+    МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ\\
+    НАЦІОНАЛЬНИЙ ТЕХНІЧНИЙ УНІВЕРСИТЕТ\\\
+    <<Харківський політехнічний інститут>>\\\
+    Кафедра <<\docDepartment>>\\
+    \vspace{1cm}
+    {КУРСОВА РОБОТА}\\
+    {<<\docSubject>>}
+\end{center}
+\vspace{-\baselineskip}
+Керівник роботи:\\
+\hspace*{1cm} \workSupervisorPosition \hfill \workSupervisor \hspace*{1cm}\\
+Виконавець:\\
+\hspace*{1cm} студент групи \studentGroup \hfill \studentName \hspace*{1cm}
+\begin{center}
+	Харків~--~\the\year    
+\end{center}
+\end{framed}
+\end{minipage}
+\end{center}
+\vfill
+%вторая страница
+\newpage
+\null\vfill
+%\par \vspace{\baselineskip} %непонятно, есть там пропуск первой строчки или нет
+\begin{center}
+    МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ\\
+    НАЦІОНАЛЬНИЙ ТЕХНІЧНИЙ УНІВЕРСИТЕТ\\\
+    <<Харківський політехнічний інститут>>\\\
+    Кафедра <<\docDepartment>>
+\end{center}
+
+\hfill\begin{minipage}[t]{91.9mm}
+	Оцінка\\
+	\null\hrulefill\\	
+	\docCheckerPosition\\
+	\null\hrulefill/\docChecker/\\
+	<<~~~~~~~>> \hfill 20~~~~р.
+\end{minipage}
+%\par \vspace{\baselineskip}
+\par \vspace{\baselineskip}
+\begin{center}
+    {КУРСОВА РОБОТА}\\
+    {Тема: <<\docSubject>>}
+\end{center}
+Керівник роботи:\\
+\begin{minipage}[t]{52.7mm}\workSupervisorPosition\end{minipage} \hspace*{76.2mm} \begin{minipage}[t]{54.9mm}/\workSupervisor/\end{minipage}\\
+\datePlaceholder\\ 
+Виконавець:\\
+\begin{minipage}[t]{52.7mm}студент групи \studentGroup\end{minipage} \hspace*{76.2mm} \begin{minipage}[t]{54.9mm}/\studentName/\end{minipage}\\
+\datePlaceholder\\
+
+\begin{center}
+\par \vspace{\baselineskip}
+\par \vspace{\baselineskip}
+\par \vspace{\baselineskip}
+	Харків~--~\the\year    
+\end{center}
+\vfill
+}

@@ -1,7 +1,19 @@
-\section{Примеры использования}
-	\subsection{Опциональный пакет <<kpi.util.listing>>}
+\subsection{Опциональный пакет <<kpi.util.listing>>}
 		Пример вставки листинга, автоматических ссылок и автоматической разбивки его
 		на отдельные рисунки приведён на
 		рисунках\listingLink{kpi-util-listing-first}.
 		\putListing{./etc/listing.cpp}{Исходный код файла
 		<<./etc/listing.cpp>>}{kpi-util-listing-first}{c}
+\subsection{Опциональный пакет <<kpi.title.coursework>>}
+	Пакет позволяет сформировать титульные листы для курсовой работы. Как и любой title-пакет, определяет всего одну команду <<maketitle>>. Для формирования требуется, чтобы были определены следующие команды метаинформации: 
+	\begin{enumerate}
+	\item docDepartment~--~название кафедры;
+	\item workSupervisor~--~руководитель работы, например: <<Сокол В.Е.>>;
+	\item workSupervisorPosition~--~статус руководителя работы, например <<асистент каф. АСУ>>;
+	\item docSubject~--~название курсовой работы;
+	\item studentGroup~--~группа автора;
+	\item studentName~--~ФИО автора;
+	\item docChecker~--~ФИО проверяющего;
+	\item docCheckerPosition~--~статус проверяющего, например <<голова комісії професор>>.	
+	\end{enumerate}
+	Пример сформированных листов приведён в файле <<./etc/title-coursework.pdf>>.
