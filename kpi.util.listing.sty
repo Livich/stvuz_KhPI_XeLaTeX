@@ -45,14 +45,9 @@
 % этот рисунок. Если рисунков больше - это тоже учитывается и будут возвращены
 % ссылки на первый и последний рисунки через дефис
 %Использование: \listingLink{[метка листинга]}
-\newcommand{\listingLink}[1]{
-	\renewcommand{\currentCounterName}{\#1:counter{}}
-	\ifnum 1=\currentCounterName
-			{\ref{#1-0}} 
-		\else 
-			{\ref{#1-0}~--~\ref{#1-last}} 
-	\fi	
-}
+\makeatletter
+\newcommand{\listingLink}[1]{\@ifundefined{r@#1-0}{\ref{#1-last}}{\ref{#1-0}~--~\ref{#1-last}}}
+\makeatother
 
 \lstset{
    breaklines=true,
