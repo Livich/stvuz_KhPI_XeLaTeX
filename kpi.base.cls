@@ -1,10 +1,10 @@
-%stvuz_khpi.cls
+%kpi.base
 %Этот файл преимущественно написан в рамках проекта https://github.com/vbolshutkin/LaTeX-STVUZ-KhPI
 %Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
 %Обеспеичвает общее стилевое оформление
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesClass{stvuz_khpi}[2010/03/01]
+\ProvidesClass{kpi.base}[2013/12/31]
 \LoadClass[a4paper,14pt,hyphens]{extarticle}[1996/10/08]
 
 \usepackage{amssymb} %% математические символы % надо подключать вначале
