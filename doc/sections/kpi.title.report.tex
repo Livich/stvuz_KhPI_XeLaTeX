@@ -1,0 +1,26 @@
+\subsection{Опциональный пакет <<kpi.title.coursework>>}
+Обеспеичвает генерацию титульной страницы для курсовой работы.\par
+Зависимости: hyperref.\par
+Внимание: подключение пакета изменяет некоторые настройки hyperref.\par
+Макросы:
+\begin{enumerate}
+\item maketitle.
+\end{enumerate}
+\subsubsection{Макрос <<maketitle>>}
+makeTitle генерирует титульную страницу для курсовой работы.
+Использование:{\small
+\begin{Verbatim}
+\maketitle
+\end{Verbatim}}
+\normalsize
+maketitle требует чтобы были определены следующие макросы:
+\begin{enumerate}
+\item docDepartment - название кафедры;
+\item workSupervisor - руководитель работы, напр. "Сокол В.Е.";
+\item workSupervisorPosition - статус руководителя работы, например "асистент каф. АСУ";
+\item docSubject - название курсовой работы;
+\item studentGroup - группа автора;
+\item studentName - ФИО автора;
+\item docChecker - ФИО проверяющего;
+\item docCheckerPosition - статус проверяющего, например "голова комісії професор".
+\end{enumerate}

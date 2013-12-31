@@ -1,0 +1,24 @@
+\subsection{Опциональный пакет <<kpi.title.report>>}
+Обеспеичвает генерацию титульной страницы <<Звіт>>.\par
+Зависимости: hyperref.\par
+Внимание: подключение пакета изменяет некоторые настройки hyperref.\par
+Макросы:
+\begin{enumerate}
+\item maketitle.
+\end{enumerate}
+\subsubsection{Макрос <<maketitle>>}
+makeTitle генерирует титульную страницу <<Звіт>>.
+Использование:{\small
+\begin{Verbatim}
+\maketitle
+\end{Verbatim}}
+\normalsize
+maketitle требует чтобы были определены следующие макросы:
+\begin{enumerate}
+\item docNumber - номер (лабораторной) работы; 
+\item docDepartment - название кафедры;
+\item docSubject - название учебной дисциплины;
+\item studentGroup - группа автора;
+\item studentName - ФИО автора;
+\item docChecker - должность и ФИО проверяющего.
+\end{enumerate}
