@@ -21,6 +21,7 @@
 
 
 \newfontfamily\cyrillicfont{Times New Roman}
+\newfontfamily\cyrillicfonttt{Times New Roman}
 
 
 \makeatletter
