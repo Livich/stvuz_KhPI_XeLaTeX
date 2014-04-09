@@ -4,13 +4,12 @@
 %Макросы: putImage
 
 %PutImage позволяет отобразить изображение
-%Использование: \putImage{[имя файла
-% изображения]}{[подпись]}{[масштаб]}{[метка]}
+%Использование: \putImage{[метка]}{[имя файла изображения]}{[подпись]}{[масштаб]}
 \newcommand{\putImage}[4]{
 	\begin{stdfigure}
-		\includegraphics[scale=#3]{#1}
-		\caption{#2}
-		\label{#4}
+		\includegraphics[scale=#4]{#2}
+		\caption{#3}
+		\label{#1}
 		\addtocounter{ESKD@figure}{1}
 	\end{stdfigure}
 }

@@ -1,6 +1,6 @@
-\putImage{%<filename%>}{%<title%>}{%<scale%>}{image:%<label%>}#l
-\dPutImage{%<filename%>}{%<title%>}{%<scale%>}{image:%<label%>}#l
-\putListing{%<filename%>}{%<title%>}{listing:%<label%>}{%<language%>}#l
-\dPutListing{%<filename%>}{%<title%>}{listing:%<label%>}{%<language%>}#l
+\putImage{image:%<label%>}{%<filename%>}{%<title%>}{%<scale%>}#l
+\dPutImage{image:%<label%>}{%<filename%>}{%<title%>}{%<scale%>}#l
+\putListing{listing:%<label%>}{%<filename%>}{%<title%>}{%<language%>}#l
+\dPutListing{listing:%<label%>}{%<filename%>}{%<title%>}{%<language%>}#l
 \listingLink{listing:%<label%>}#r
 \draftPage#n

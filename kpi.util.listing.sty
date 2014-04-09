@@ -23,20 +23,20 @@
 
 %putListing вставляет листинг с разбивкой на страницы, как будто это изображения
 % (маразм)
-%Использование: \putListing{[исходный файл]}{[подпись]}{[метка]}{[язык
+%Использование: \putListing{[метка]}{[исходный файл]}{[подпись]}{[язык
 % листинга]}
 \newcommand{\putListing}[4]{
-	\renewcommand{\currentSourceName}{#2}
-	\renewcommand{\currentCounterName}{#3:counter}
+	\renewcommand{\currentSourceName}{#3}
+	\renewcommand{\currentCounterName}{#1:counter}
 	\newcounter{\currentCounterName}
-	\renewcommand{\currentSourceLabel}{#3-\arabic{\currentCounterName}}
+	\renewcommand{\currentSourceLabel}{#1-\arabic{\currentCounterName}}
 	\lstset{language=#4}
 	{
 	\begin{framed}
-		\lstinputlisting{#1}
+		\lstinputlisting{#2}
 	\end{framed}
-	\captionof{figure}{#2}
-		\label{#3-last}
+	\captionof{figure}{#3}
+		\label{#1-last}
 	}
 }
 

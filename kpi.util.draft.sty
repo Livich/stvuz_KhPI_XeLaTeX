@@ -9,21 +9,20 @@
 \ifdraft{\let\ifxdraft\iftrue}{\let\ifxdraft\iffalse}
 
 %dPutImage позволяет отобразить вместо изображения его заглушку
-%Использование: \dPutImage{[имя файла
-% изображения]}{[подпись]}{[масштаб]}{[метка]}
+%Использование: \dPutImage{[метка]}{[имя файла изображения]}{[подпись]}{[масштаб]}
 \newcommand{\dPutImage}[4]{\ifxdraft
-	{\bf STUB:} Sorry, this image (<<#2>>) disabled in draft mode. Lookup
-	for image in <<#1>>. \label{#4}
+	{\bf STUB:} Sorry, this image (<<#3>>) disabled in draft mode. Lookup
+	for image in <<#2>>. \label{#4}
 \else
 	\putImage{#1}{#2}{#3}{#4}
 \fi}
 
 %dPutListing позволяет отобразить вместо листинга его заглушку
 %Использование:
-% \dPutListing{[исходный файл]}{[подпись]}{[метка]}{[язык листинга]}
+% \dPutListing{[метка]}{[исходный файл]}{[подпись]}{[язык листинга]}
 \newcommand{\dPutListing}[4]{\ifxdraft
-	{\bf STUB:} Sorry, this listing (<<#2>>) disabled in draft mode. Lookup
-	for code in <<#1>>. \label{#3} \addtocounter{ESKD@figure}{1}
+	{\bf STUB:} Sorry, this listing (<<#3>>) disabled in draft mode. Lookup
+	for code in <<#2>>. \label{#1} \addtocounter{ESKD@figure}{1}
 \else
 	\putListing{#1}{#2}{#3}{#3}
 \fi}
