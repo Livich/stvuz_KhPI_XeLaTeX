@@ -704,7 +704,7 @@ mu$}\hfill%
 \liststyleNumberingArabicLitera
 
 
-\usepackage[unicode,breaklinks]{hyperref}
+\usepackage[unicode,breaklinks,pdfencoding=auto]{hyperref}
 
 % Стили оформления веб-ссылок
 %\let\old@url\url FIXME bug: with \uline links cannot be hyphenated
