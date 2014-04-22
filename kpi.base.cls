@@ -308,7 +308,7 @@
 {subsubsection}%	% the name
 {3}%			% the level
 {-1.25cm}%			% the indent
-{0.1\baselineskip}%{0.3\baselineskip}%	% the before skip
+{1\baselineskip}%{0.3\baselineskip}%	% the before skip
 {0.1\baselineskip}%	% the after skip
 {\subsectionHeading}%	% the style
 }
