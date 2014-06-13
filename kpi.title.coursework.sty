@@ -55,7 +55,6 @@ pdfauthor={\studentName}}
 \vfill
 %вторая страница
 \newpage
-\null\vfill
 %\par \vspace{\baselineskip} %непонятно, есть там пропуск первой строчки или нет
 \begin{center}
     МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ\\
@@ -63,7 +62,7 @@ pdfauthor={\studentName}}
     <<Харківський політехнічний інститут>>\\\
     Кафедра <<\docDepartment>>
 \end{center}
-
+\null\vfill
 \hfill\begin{minipage}[t]{91.9mm}
 	Оцінка\\
 	\null\hrulefill\\	
@@ -72,7 +71,8 @@ pdfauthor={\studentName}}
 	<<~~~~~~~>> \hfill 20~~~~р.
 \end{minipage}
 %\par \vspace{\baselineskip}
-\par \vspace{\baselineskip}
+%\par \vspace{\baselineskip}
+\vfill
 \begin{center}
     {КУРСОВА РОБОТА}\\
     {Тема: <<\docSubject>>}
@@ -85,10 +85,11 @@ pdfauthor={\studentName}}
 \datePlaceholder\\
 
 \begin{center}
-\par \vspace{\baselineskip}
-\par \vspace{\baselineskip}
-\par \vspace{\baselineskip}
+%\par \vspace{\baselineskip}
+%\par \vspace{\baselineskip}
+%\par \vspace{\baselineskip}
+\null\vfill
 	Харків~--~\the\year    
 \end{center}
-\vfill
+%\vfill
 }
