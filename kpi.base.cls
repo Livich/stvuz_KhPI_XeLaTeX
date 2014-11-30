@@ -232,19 +232,19 @@
 
 % Команда для генерации заголовка приложения
 \newcommand\appendixSection[1]{
-\stepcounter{section}
-\stepcounter{appendix}
+\refstepcounter{section}
+\refstepcounter{appendix}
 \section*{\sectionHeadingLiteraInternal{Додаток~\thesection}\\ \skipline #1}
 \addcontentsline{toc}{section}{\tocsecindent{Додаток~\thesection~#1}}
 }
 
 \newcommand\appendixSubsection[1]{
-\stepcounter{subsection}
+\refstepcounter{subsection}
 \subsection*{\thesubsection~#1}
 }
 
 \newcommand\appendixSubsubsection[1]{
-\stepcounter{subsubsection}
+\refstepcounter{subsubsection}
 \subsubsection*{\thesubsubsection~#1}
 }
 
