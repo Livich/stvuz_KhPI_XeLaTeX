@@ -1,0 +1,43 @@
+%НТУ ХПИ, кафедра АСУ. Стандарт СТВУЗ-ХПИ-2006, реализация для XeLaTeX
+%Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
+%Основано на https://github.com/vbolshutkin/LaTeX-STVUZ-KhPI
+
+%kpi.template.statement.tex
+%Основной файл проекта, требует компиляции (XeLaTeX, кодировка UTF-8)
+%ПОЖАЛУЙСТА, ЗАПОЛНИТЕ СЕКЦИЮ metainfo, как описано в документации к пакету
+
+\documentclass{kpi.base}
+
+\usepackage[ddmmyyyy,hhmmss]{datetime}
+\usepackage{kpi.util.docparts}
+
+%Далее следует секция базовой информации документа. Подробнее о ней смотрите в
+%документации пакета.
+%METAINFO:
+\newcommand{\studentName}{Іванов С.О.}% Автор документа
+\newcommand{\studentNameAccusative}{Іванова С.О.}% Автор документа в винительном падеже
+\newcommand{\documentCode}{}%Код документа, например mmio-lab7
+\newcommand{\studentGroup}{ІФ 31-Г}
+\setTitle{Заява}%Название документа
+%METAINFO END
+
+
+\begin{document}
+\headMinipage{Завідуючему кафедрою АСУ\\проф. Годлевському М.Д.}
+
+\vspace{1cm}
+\begin{center}{\large\bf\MakeUppercase{\Title}\hfill}\end{center}
+\vspace{1cm}
+
+%TODO:body is here
+
+\vspace{1cm}
+
+\signPlaceholder{}{\studentName}
+
+\signPlaceholder{Керівник бакалаврської роботи}{Лютенко І.В.}
+
+\signPlaceholder{Керівник спеціальності}{Орєхов С.В.}
+
+{\hfill\today}
+\end{document}

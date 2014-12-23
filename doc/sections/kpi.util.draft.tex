@@ -12,35 +12,35 @@
 \subsubsection{Макрос <<ifxdraft>>}
 Позволяет выполнять проекрку режима черновика.
 Использование:{\small
-\begin{Verbatim}
+\begin{verbatim}
 \ifxdtaft [если черновик] \else [если не черновик] \fi
-\end{Verbatim}}
+\end{verbatim}}
 \normalsize
 
 \subsubsection{Макрос <<dPutImage>>}
 Позволяет отобразить вместо изображения его заглушку в режиме черновика, и само изображение в чистовом режиме.
 Использование:{\small
-\begin{Verbatim}
+\begin{verbatim}
 \dPutImage{[метка]}{[имя файла изображения]}{[подпись]}{[масштаб]}
-\end{Verbatim}}
+\end{verbatim}}
 \normalsize
 Исползование макроса аналогично putImage.
 
 \subsubsection{Макрос <<dPutListing>>}
 Позволяет отобразить вместо листинга его заглушку в режиме черновика, и сам листинг в чистовом режиме.
 Использование:{\small
-\begin{Verbatim}
+\begin{verbatim}
 \dPutListing{[метка]}{[исходный файл]}{[подпись]}{[язык листинга]}
-\end{Verbatim}}
+\end{verbatim}}
 \normalsize
 Использование макроса аналогично putListing.
 
 \subsubsection{Макрос <<draftPage>>}
 Позволяет подключать к документу-черновику страницу с информацией о версии документа
 Использование:{\small
-\begin{Verbatim}
+\begin{verbatim}
 \draftPage
-\end{Verbatim}}
+\end{verbatim}}
 \normalsize
 В результате использования будет отображена страница, извещающая о том, что этот документ является черновиком. Также будет показана таблица со сводной информацией о версии документа.\par
 В случае, если документ компилируется в чистовом режиме, команда не делает ничего.

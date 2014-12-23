@@ -1,0 +1,18 @@
+%kpi.util.docparts.sty
+%Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
+%Определяет различные типовые части документов
+%Макросы: headMinipageWidth, headMinipage (studentNameAccusative должна быть определена)
+\newcommand{\setTitle}[1]{\title{#1} \makeatletter \let\Title\@title \makeatother }
+
+\newcommand{\headMinipageWidth}{0.35\textwidth}
+\newcommand{\headMinipage}[1]{
+\hfill\begin{tabular}{l}
+#1\\
+студента групи~\studentGroup\\
+\noindent\underline{\makebox[\headMinipageWidth][c]{\studentNameAccusative}	}
+\end{tabular}
+}
+
+\newcommand{\signPlaceholder}[2]{
+	\noindent\makebox[0.5\textwidth][l]{#1}\makebox[0.2\textwidth][r]{\underline{\hspace{0.2\textwidth}}}\makebox[0.3\textwidth][r]{#2}
+}

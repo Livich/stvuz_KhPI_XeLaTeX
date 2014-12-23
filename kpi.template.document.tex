@@ -1,0 +1,45 @@
+%НТУ ХПИ, кафедра АСУ. Стандарт СТВУЗ-ХПИ-2006, реализация для XeLaTeX
+%Часть проекта https://github.com/Livich/stvuz_KhPI_XeLaTeX
+%Основано на https://github.com/vbolshutkin/LaTeX-STVUZ-KhPI
+
+%document.tex
+%Основной файл проекта, требует компиляции (XeLaTeX, кодировка UTF-8)
+%ПОЖАЛУЙСТА, ЗАПОЛНИТЕ СЕКЦИЮ metainfo, как описано в документации к пакету
+
+\documentclass{kpi.base}
+
+%Далее следует секция базовой информации документа. Подробнее о ней смотрите в
+%документации пакета.
+%METAINFO:
+\newcommand{\studentName}{}% Автор документа, например Іванов С.О.
+\newcommand{\documentTitle}{}%Заголовок документа
+\newcommand{\documentCode}{}%Код документа, например mmio-lab7
+\title{}%Название документа
+%METAINFO END
+
+%Общие опциональные пакеты:
+\usepackage{url}
+\urlstyle{same}
+\input{pygmentize}
+\usepackage{rotating}
+\usepackage{hyperref}
+
+%Поддержка черновиков
+\usepackage{listings}
+\usepackage{ifdraft}
+\usepackage{kpi.util.draft}
+
+%Поддержка листингов
+\usepackage{framed}
+\usepackage{kpi.util.listing}
+
+%Поддержка вставки изображений
+\usepackage{kpi.util.image}
+
+%Поддержка титульной страницы типа `отчёт` (нужно доопределить метаданные!)
+%\usepackage{kpi.title.report}
+    
+\begin{document}
+%тело документа
+%\bibliography{sources.bib} %библиографический список 
+\end{document}

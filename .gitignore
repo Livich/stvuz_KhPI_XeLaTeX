@@ -1,0 +1,14 @@
+.idea
+*.iml
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+.project
+.texlipse
+tmp
+*.txss
+*.pdf

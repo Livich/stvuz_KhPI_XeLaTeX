@@ -4,3 +4,5 @@
 \dPutListing{listing:%<label%>}{%<filename%>}{%<title%>}{%<language%>}#l
 \listingLink{listing:%<label%>}#r
 \draftPage#n
+\headMinipage{%<text%>}#n
+\signPlaceholder{%<position%>}{%<name%>}

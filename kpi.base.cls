@@ -232,19 +232,19 @@
 
 % Команда для генерации заголовка приложения
 \newcommand\appendixSection[1]{
-\refstepcounter{section}
-\refstepcounter{appendix}
+\stepcounter{section}
+\stepcounter{appendix}
 \section*{\sectionHeadingLiteraInternal{Додаток~\thesection}\\ \skipline #1}
 \addcontentsline{toc}{section}{\tocsecindent{Додаток~\thesection~#1}}
 }
 
 \newcommand\appendixSubsection[1]{
-\refstepcounter{subsection}
+\stepcounter{subsection}
 \subsection*{\thesubsection~#1}
 }
 
 \newcommand\appendixSubsubsection[1]{
-\refstepcounter{subsubsection}
+\stepcounter{subsubsection}
 \subsubsection*{\thesubsubsection~#1}
 }
 
@@ -308,7 +308,7 @@
 {subsubsection}%	% the name
 {3}%			% the level
 {-1.25cm}%			% the indent
-{1\baselineskip}%{0.3\baselineskip}%	% the before skip
+{0.1\baselineskip}%{0.3\baselineskip}%	% the before skip
 {0.1\baselineskip}%	% the after skip
 {\subsectionHeading}%	% the style
 }
@@ -704,7 +704,7 @@ mu$}\hfill%
 \liststyleNumberingArabicLitera
 
 
-\usepackage[unicode,breaklinks,pdfencoding=auto]{hyperref}
+\usepackage[unicode,breaklinks]{hyperref}
 
 % Стили оформления веб-ссылок
 %\let\old@url\url FIXME bug: with \uline links cannot be hyphenated
