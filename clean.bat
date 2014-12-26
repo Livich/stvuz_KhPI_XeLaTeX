@@ -8,5 +8,4 @@ del /S *.fdb_latexmk
 del /S *.bbl
 del /S *.synctex.gz
 del /S *.toc
-del /S *.bst
 echo Successful
