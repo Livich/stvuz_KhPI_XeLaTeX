@@ -9,14 +9,13 @@
 
 \usepackage{amssymb} %% математические символы % надо подключать вначале
 \usepackage{xltxtra}
+\usepackage{booktabs} %%утолщённые линии в заголовках таблиц
 \usepackage{polyglossia}  %% подключает пакет многоязыкой вёрстки
 \setmainfont{Times New Roman}  %% задаёт основной шрифт документа
 \setsansfont{DejaVu Sans}  %% задаёт шрифт без засечек
 \setmonofont{DejaVu Sans Mono}  %% задаёт моноширинный шрифт
 \defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}  %% устанавливает поведение шрифтов по умолчанию
 \setdefaultlanguage{ukrainian}
-%\setkeys{russian}{babelshorthands=true} %% FIXME не работает
-%\setdefaultlanguage[spelling=modern]{russian}  %% устанавливает язык по умолчанию
 \setotherlanguage{english}
 
 
@@ -73,12 +72,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Пакеты
 \usepackage{footmisc}
-%\usepackage[warn]{mathtext} % кириллические буквы в формулах % несовместимо с
-% xelatex
 \usepackage{fontspec}
 \usepackage{xunicode}
-%\usepackage{cmap}
-%\usepackage{xecyr}
 \input{cyrunicode}
 
 \let\footnotesize\relax
@@ -90,8 +85,6 @@
 \usepackage{ifthen}
 \usepackage{intcalc} % to calculate mod for declination
 
-%\usepackage[noenc]{tipa}
-%\usepackage{tipx}
 \usepackage{boldline} % поддержка жирных линий в таблицах
 
 \usepackage[geometry,weather,misc,clock]{ifsym}
@@ -104,7 +97,6 @@
 \usepackage{wasysym}
 
 \usepackage{amsfonts}
-%\usepackage{textcomp} % Conflicts
 \usepackage{tabularx}
 
 \usepackage{floatrow}
@@ -122,7 +114,6 @@
 \usepackage{hyphenat} % переносы
 
 \usepackage{cite} % вставка ссылок на источники
-%\usepackage{url} % вставка ссылок на интернет ресурсы
 \usepackage{ulem}
 \usepackage{float} % поддержка плавающих блоков (картинки, таблицы)
 \usepackage{rotating} % поворот текста
@@ -144,11 +135,6 @@
 
 \usepackage{caption}
 \DeclareCaptionFormat{plain}{#1~–~#3} % -- не работал, заменили юникодным
-
-%\usepackage{printlen} % отладочные команды
-%\newcommand*{\Lenv}[1]{\texttt {#1}} %
-
-%\graphicspath{{images/}} %путь к рисункам
 
 % END OF Header
 
@@ -393,8 +379,8 @@ mu$}\hfill%
 % Рисунки
 
 %% Пропуск строки перед рисунками
-\newenvironment{stdfigure}{\@float{figure}[h!] 
-\skipline \centering } {\end@float}
+\newenvironment{stdfigure}{\begin{figure}[H]
+\skipline \centering } {\end{figure}}
 
 % СТВУЗ ХПІ 3.01-2010 пункт 6.3.4.6
 % команда для продолжения рисунков  
@@ -581,13 +567,11 @@ mu$}\hfill%
 
 % стили переноса таблиц 
 
-% Определение команды "Толстая горизонтальная линия"
-\def\Hline{\hlineB{3}}
-
 % СТВУЗ ХПІ 3.01-2010 6.3.3.4 - заголовок таблицы отделяем неутолщенной линией
-% Для утолщенной линии - \Hline, FIXME - толстая линия вылазит за пределы
-% таблицы
-\def\headerline{\hline} 
+\def\headerline{
+%\specialrule{1.1\heavyrulewidth}{0em}{0em} %%на случай, если нужны утолщённые
+\hline
+}
 
 % СТВУЗ ХПІ 3.01-2010 6.3.3.7 - при переносе таблицы можем вместо заголвка
 % писать номера колонок
